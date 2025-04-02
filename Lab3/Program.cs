@@ -19,15 +19,15 @@
             // If else statement to check if a > b and c
             if (a > b && a > c)
             {
-                Console.WriteLine("True");
+                Console.WriteLine("a > b && a > c: True");
             }
             else
             {
-                Console.WriteLine("False");
+                Console.WriteLine("a > b && a > c: False");
             }
 
             // Check if a > b or a > c using || in shorthand variation
-            Console.WriteLine(a > b || a > c ? "True" : "False");
+            Console.WriteLine(a > b || a > c ? "a > b || a > c: True" : "a > b || a > c: False");
 
             // Part 2: Boolean Logic
             // Declaring variables
