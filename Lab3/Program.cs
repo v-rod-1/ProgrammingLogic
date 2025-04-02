@@ -1,4 +1,5 @@
-﻿namespace Lab3
+﻿namespace Lab3;
+
 {
     class Program
     {
@@ -30,7 +31,7 @@
             Console.WriteLine(a > b || a > c ? "a > b || a > c: True" : "a > b || a > c: False");
 
             // Part 2: Boolean Logic
-            // Declaring variables
+            // Declaring variable
             bool isRaining = true;
             bool haveUmbrella = false;
 
