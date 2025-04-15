@@ -60,6 +60,7 @@ class Program
         Array.Sort(temperatures); // Sort the array in ascending order
 
         Console.Write("Sorted Temperatures: ");
+        
         foreach (int temp in temperatures)
         {
             Console.Write(temp + " "); // Print the sorted temperatures
