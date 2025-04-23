@@ -51,7 +51,7 @@ class Program
 
     myCar.Drive(50); // Calling the Drive method while stating mileage
 
-    string description = myCar.GetDescription(); // Calling GetDescription method
+    string description = myCar.GetDescription(); // Creating a string that calls the GetDescription method
 
     Console.WriteLine(description); // Displaying GetDescription method
 
