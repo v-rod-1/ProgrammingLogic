@@ -1,76 +1,68 @@
 ﻿namespace Lab7;
 
-public class Book
+class Book
 {
-    // Private fields
     private string title;
     private string author;
 
-    // Default constructor
-    public Book()
+    public Book()  // Default Constructor
     {
         title = "Unknown Title";
     }
 
-    // Parameterized constructor (title only)
-    public Book(string title)
+    public Book(string title) // Parameterized constructor
     {
         this.title = title;
     }
 
-    // Overloaded constructor (title and author)
-    public Book(string title, string author)
+    public Book(string title, string author) // Overloaded constructor
     {
         this.title = title;
         this.author = author;
     }
 
     // Getters
-    public string GetTitle() 
+    public string GetTitle()
     {
-        return this.title;
+        return title;
     }
 
     public string GetAuthor()
     {
-        return this.author;
+        return author;
     }
 
     // Setters
-    public void SetTitle(string title)
+    public void SetTitle(string newTitle)
     {
-        this.title = title;
+        this.title = newTitle;
     }
 
-    public void SetAuthor(string author)
+    public void SetAuthor(string newAuthor)
     {
-        this.author = author;
+        this.author = newAuthor;
     }
 }
+
 class Program
 {
     static void Main(string[] args)
     {
-        // Problem 1
         Book book1 = new Book();
-        Console.WriteLine(book1.GetTitle());  // Output default - Unknown Title
-        book1.SetTitle("C# Fundamentals"); // Setter for new title
-        Console.WriteLine(book1.GetTitle());  // Output C# Fundamentals
+        Console.WriteLine(book1.GetTitle());  // Output: Unknown Title
 
-        // Problem 2
-        Book book2 = new Book("Learning C#"); // Parameterized setter
-        Console.WriteLine(book2.GetTitle());  // Output: Learning C#
+        book1.SetTitle("C# Fundamentals");
+        Console.WriteLine(book1.GetTitle());  // Output: C# Fundamentals
 
-        // Problem 3
-        Book book3 = new Book("Advanced C#", "John Doe"); // Overloaded setter
-        Console.WriteLine("Title: " + book3.GetTitle());   // Output Advanced C#
-        Console.WriteLine("Author: " + book3.GetAuthor()); // Output John Doe
+        Book book2 = new Book("Advanced C#");
+        Console.WriteLine(book2.GetTitle()); // Output: Advanced C#
 
-        // Problem 4
+        Book book3 = new Book("The Alchemist", "Paulo Coehlo");
+        Console.WriteLine(book3.GetTitle() + " by " + book3.GetAuthor()); // Output: The Alchemist by Paulo Coelho
+
         Book book4 = new Book();
-        book4.SetTitle("Mastering C#"); // Updating title using setter
-        book4.SetAuthor("Jane Smith"); // Updating author using setter
-        Console.WriteLine("Title: " + book4.GetTitle());   // Output Mastering C#
-        Console.WriteLine("Author: " + book4.GetAuthor()); // Output Jane Smith
+        book4.SetTitle("The Diary of a Young Girl"); // Setting title
+        book4.SetAuthor("Anne Frank"); // Setting author
+        Console.WriteLine("Title: " + book4.GetTitle() + " | Author: " + book4.GetAuthor()); // Output
     }
 }
