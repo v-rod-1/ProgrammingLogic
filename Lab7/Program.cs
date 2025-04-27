@@ -51,13 +51,13 @@ class Program
         Book book1 = new Book();
         Console.WriteLine(book1.GetTitle());  // Output: Unknown Title
 
-        book1.SetTitle("C# Fundamentals");
+        book1.SetTitle("C# Fundamentals"); 
         Console.WriteLine(book1.GetTitle());  // Output: C# Fundamentals
 
-        Book book2 = new Book("Advanced C#");
+        Book book2 = new Book("Advanced C#"); // One parameter setter
         Console.WriteLine(book2.GetTitle()); // Output: Advanced C#
 
-        Book book3 = new Book("The Alchemist", "Paulo Coehlo");
+        Book book3 = new Book("The Alchemist", "Paulo Coehlo"); // Overloaded Setter
         Console.WriteLine(book3.GetTitle() + " by " + book3.GetAuthor()); // Output: The Alchemist by Paulo Coelho
 
         Book book4 = new Book();
